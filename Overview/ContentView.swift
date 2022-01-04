@@ -7,6 +7,13 @@
 
 import SwiftUI
 
+extension View {
+    func debug() -> Self {
+        print(Mirror(reflecting: self).subjectType)
+        return self
+    }
+}
+
 struct ContentView: View {
     @State var counter = 0
     var body: some View {
@@ -23,7 +30,7 @@ struct ContentView: View {
             } else {
                 Text("You've not yet tapped")
             }
-        }
+        }.debug()
     }
 }
 
