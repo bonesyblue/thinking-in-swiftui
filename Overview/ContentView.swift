@@ -30,7 +30,10 @@ struct ContentView: View {
             } else {
                 Text("You've not yet tapped")
             }
-        }.debug()
+        }
+        .frame(width: 200, height: 200)
+        .border(Color.black)
+        .debug()
     }
 }
 
